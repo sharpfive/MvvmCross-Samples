@@ -6,8 +6,7 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Platform.Platform;
 using MvvmCross.iOS.Views.Presenters;
-using MvvmCross.iOS.Support.SidePanels;
-using MvvmCross.iOS.Support;
+using MvvmCross.iOS.Support.XamarinSidebar;
 using MvvmCross.iOS.Support.JASidePanels;
 
 namespace XPlatformMenus.Touch
@@ -43,7 +42,7 @@ namespace XPlatformMenus.Touch
 
         protected override IMvxIosViewPresenter CreatePresenter()
         {
-			return new MvxSidePanelsPresenter((MvxApplicationDelegate)ApplicationDelegate, Window);
+            return new MvxSidebarPresenter((MvxApplicationDelegate)ApplicationDelegate, Window);
         }
 
         protected override void InitializeFirstChance()
@@ -53,7 +52,7 @@ namespace XPlatformMenus.Touch
             Mvx.RegisterSingleton<IDialogService>(() => new TouchDialogService());
             //register the presentation hint to pop to root
             //picked up in the third view model
-            Mvx.RegisterSingleton<MvxPresentationHint>(() => new MvxPanelPopToRootPresentationHint(MvxPanelEnum.Center));
+            //Mvx.RegisterSingleton<MvxPresentationHint>(() => new MvxPanelPopToRootPresentationHint(MvxPanelEnum.Center));
         }
 	}
 }

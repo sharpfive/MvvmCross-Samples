@@ -1,10 +1,10 @@
-using Cirrious.FluentLayouts.Touch;
+ï»¿using Cirrious.FluentLayouts.Touch;
 using Foundation;
 using UIKit;
 using XPlatformMenus.Core.ViewModels;
 using MvvmCross.iOS.Views;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.iOS.Support.SidePanels;
+using MvvmCross.iOS.Support.XamarinSidebar;
 
 namespace XPlatformMenus.Touch.Views
 {
@@ -12,7 +12,7 @@ namespace XPlatformMenus.Touch.Views
     /// The login view
     /// </summary>
     [Register("LoginView")]
-	[MvxPanelPresentation(MvxPanelEnum.Center, MvxPanelHintType.ActivePanel, true)]
+    [MvxSidebarPresentation(MvxPanelEnum.Center, MvxPanelHintType.PushPanel, true)]
     public class LoginView : MvxViewController<LoginViewModel>
     {
         #region Constructors
@@ -29,11 +29,11 @@ namespace XPlatformMenus.Touch.Views
         #region Public Methods
 
         /// <summary>
-        /// Called after the controller’s <see cref="P:UIKit.UIViewController.View"/> is loaded into memory.
+        /// Called after the controllerâ€™s <see cref="P:UIKit.UIViewController.View"/> is loaded into memory.
         /// </summary>
         /// <remarks>
         /// <para>
-        /// This method is called after <c>this</c> <see cref="T:UIKit.UIViewController"/>'s <see cref="P:UIKit.UIViewController.View"/> and its entire view hierarchy have been loaded into memory. This method is called whether the <see cref="T:UIKit.UIView"/> was loaded from a .xib file or programmatically.
+        /// This method is called after <c>this</c>Â <see cref="T:UIKit.UIViewController"/>'s <see cref="P:UIKit.UIViewController.View"/> and its entire view hierarchy have been loaded into memory. This method is called whether the <see cref="T:UIKit.UIView"/> was loaded from a .xib file or programmatically.
         /// </para>
         /// </remarks>
         public override void ViewDidLoad()

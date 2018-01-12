@@ -4,12 +4,12 @@ using Foundation;
 using UIKit;
 using XPlatformMenus.Core.ViewModels;
 using Cirrious.FluentLayouts.Touch;
-using MvvmCross.iOS.Support.SidePanels;
+using MvvmCross.iOS.Support.XamarinSidebar;
 
 namespace XPlatformMenus.Touch.Views
 {
     [Register("MenuView")]
-	[MvxPanelPresentation(MvxPanelEnum.Left, MvxPanelHintType.ActivePanel, false)]
+    [MvxSidebarPresentation(MvxPanelEnum.Left, MvxPanelHintType.PushPanel, false)]
     public class MenuView : BaseViewController<MenuViewModel>
     {
         public MenuView()

@@ -1,11 +1,11 @@
 ﻿using Foundation;
 using XPlatformMenus.Core.ViewModels;
-using MvvmCross.iOS.Support.SidePanels;
+using MvvmCross.iOS.Support.XamarinSidebar;
 
 namespace XPlatformMenus.Touch.Views
 {
     [Register("HelpView")]
-    [MvxPanelPresentation(MvxPanelEnum.Center, MvxPanelHintType.ResetRoot, true)]
+    [MvxSidebarPresentation(MvxPanelEnum.Center, MvxPanelHintType.ResetRoot, true)]
     public class HelpView : BaseViewController<HelpAndFeedbackViewModel>
     {
         public override void ViewWillAppear(bool animated)

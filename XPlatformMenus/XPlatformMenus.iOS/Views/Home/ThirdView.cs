@@ -1,14 +1,14 @@
 ﻿using Cirrious.FluentLayouts.Touch;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
+using MvvmCross.iOS.Support.XamarinSidebar;
 using UIKit;
 using XPlatformMenus.Core.ViewModels;
-using MvvmCross.iOS.Support.SidePanels;
 
 namespace XPlatformMenus.Touch.Views
 {
     [Register("ThirdView")]
-	[MvxPanelPresentation(MvxPanelEnum.Center, MvxPanelHintType.ActivePanel, true)]
+    [MvxSidebarPresentation(MvxPanelEnum.Center, MvxPanelHintType.PushPanel, true)]
     public class ThirdView : BaseViewController<ThirdViewModel>
     {
         public override void ViewDidLoad()

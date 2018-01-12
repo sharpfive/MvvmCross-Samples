@@ -3,12 +3,12 @@ using Foundation;
 using MvvmCross.Binding.BindingContext;
 using UIKit;
 using XPlatformMenus.Core.ViewModels;
-using MvvmCross.iOS.Support.SidePanels;
+using MvvmCross.iOS.Support.XamarinSidebar;
 
 namespace XPlatformMenus.Touch.Views
 {
     [Register("HomeView")]
-	[MvxPanelPresentation(MvxPanelEnum.Center, MvxPanelHintType.ResetRoot, true)]
+	[MvxSidebarPresentation(MvxPanelEnum.Center, MvxPanelHintType.ResetRoot, true)]
     public class HomeView : BaseViewController<HomeViewModel>
     {
         public override void ViewDidLoad()
